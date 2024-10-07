@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <!-- Link to Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Main container for the CV form -->
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-center uppercase">Generate Your CV</h1>
+        <form id="Form" class="mt-4">
+            <!-- Upload Picture Section -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Upload Picture:</label>
+                <input type="file" id="picture" accept="image/*" class="mt-1 block w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <!-- Name Input Section -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Name:</label>
+                <input type="text" id="name" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+
+            <!-- Email Input Section -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Email:</label>
+                <input type="email" id="email" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+
+            <!-- Phone Input Section -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Phone:</label>
+                <input type="tel" id="phone" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+
+            <!-- Education Section Header -->
+            <h2 class="text-lg font-semibold mb-2">Education</h2>
+            <div id="educationSection" class="mb-4">
+                <!-- First Education Entry -->
+                <div class="educationEntry mb-4 flex flex-col">
+                    <label class="block text-sm font-medium text-gray-700">Institute:</label>
+                    <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+                    <label class="block text-sm font-medium text-gray-700 mt-2">Degree:</label>
+                    <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+                </div>
+            </div>
+            <!-- Button to Add Another Education Entry -->
+            <button type="button" id="addEduBut" class="mb-4 w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-800">Add Another Education</button>
+
+            <!-- Experience Section Header -->
+            <h2 class="text-lg font-semibold mb-2">Experience:</h2>
+            <div class="mb-4 flex flex-col">
+                <!-- Job Title Input -->
+                <label class="block text-sm font-medium text-gray-700">Job Title:</label>
+                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+                <label class="block text-sm font-medium text-gray-700 mt-2">Duration:</label>
+                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-800">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
